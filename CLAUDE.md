@@ -35,6 +35,19 @@ Run a single test file:
 npx vitest run src/components/chat/__tests__/ChatInterface.test.tsx
 ```
 
+Test file conventions:
+- Place test files in a `__tests__/` directory next to the source file
+- Name them `[filename].test.ts` or `[filename].test.tsx`
+- Use `@/` path alias for all imports
+- Add `// @vitest-environment node` at the top for files using `jose` or other Node-only APIs
+
+## Custom Slash Commands
+
+Defined in [.claude/commands/](.claude/commands/):
+
+- `/write_tests <file>` — Generate Vitest + React Testing Library tests for a source file
+- `/audit` — Run `npm audit`, apply fixes, and verify tests still pass
+
 ## Architecture
 
 ### Three-Panel Layout

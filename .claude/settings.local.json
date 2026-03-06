@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__playwright",
+      "Bash(npx vitest run src/lib/__tests__/auth.test.ts)",
+      "Bash(npx vitest run src/hooks/__tests__/use-auth.test.ts)"
+    ]
+  }
+}
